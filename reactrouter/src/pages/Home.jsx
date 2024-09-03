@@ -1,7 +1,16 @@
+import { FeaturedProducts } from "../components/FeaturedProducts/FeaturedProducts"
+import { Footer } from "../components/Footer/Footer"
+import { Introduction } from "../components/Introduction/Introduction"
+import { IntroMsg } from "../components/IntroMsg/IntroMsg"
 
 export const Home = () => {
 
     return(
-        <h1>Home Page</h1>
+    <>
+        <Introduction/>
+        <IntroMsg/>
+        <FeaturedProducts/>
+        <Footer/>
+    </>  
     )
 }

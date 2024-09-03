@@ -1,0 +1,73 @@
+@use '../../style/variables' as *;
+
+.footer {
+    background-color: $primaryGreen; 
+    color: $primary; 
+    padding: 2rem;
+    text-align: center;
+    position: relative;
+    font-family: $font;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.links,
+.socialMedia {
+    flex: 1;
+    min-width: 200px;
+}
+
+.links h3,
+.socialMedia h3 {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+.links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.links li {
+    margin-bottom: 0.5rem;
+}
+
+.links a {
+    text-decoration: none;
+    color: $primary;
+}
+
+.links a:hover {
+    text-decoration: underline;
+}
+
+.socialMedia {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.socialMedia a {
+    display: inline-block;
+}
+
+.socialIcon {
+    width: 30px; 
+    height: 30px; 
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.socialIcon:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
+}
+
+.footerBottom {
+    margin-top: 1rem;
+    font-size: 0.875rem;
+}

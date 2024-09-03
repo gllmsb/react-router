@@ -1,0 +1,37 @@
+@use '../../style/variables' as *;
+
+.navbar {
+    background-color: $primaryGreen;
+    font-family: $font;
+    padding: 1rem;
+  
+    ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      gap: 1rem;
+      margin: 0;
+      padding: 0;
+    }
+  
+    li {
+      margin: 0 0.5rem;
+    }
+  
+    a {
+      text-decoration: none;
+      color: $beige;
+      padding: 0 0.5rem;
+      transition: color 0.3s ease, background-color 0.3s ease;
+  
+      &:hover {
+        color: $secondaryGreen;
+        text-decoration: underline;
+      }
+    }
+  
+    .activeLink {
+      color: $primary;
+    }
+  }

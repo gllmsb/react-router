@@ -1,0 +1,92 @@
+@use '../../style/variables' as *;
+
+.featuredProducts {
+    padding: 2rem;
+    background-color: $light;
+    text-align: center;
+    font-family: $font;
+  
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      color: #333;
+    }
+  
+    .productList {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+  
+    .productCard {
+      background-color: $light;
+      border: 1px solid $primaryGreen;
+      border-radius: 8px;
+      overflow: hidden;
+      padding: 1rem;
+      max-width: 250px;
+      text-align: left;
+      position: relative;
+      transition: transform 0.3s ease;
+      flex-direction: column;
+  
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  
+    .productImage {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  
+    .productInfo {
+        position: relative;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+  
+    .productName {
+      font-size: 1.25rem;
+      margin: 0.5rem 0;
+      color: $primary;
+      cursor: pointer;
+      text-align: center;
+    }
+  
+    .priceContainer {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background-color: $light;
+      padding: 0.5rem;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      opacity: 0;
+      transition: opacity 0.3s ease, top 0.3s ease;
+      text-align: center;
+    }
+  
+    .productName:hover + .priceContainer {
+      opacity: 1;
+      top: 70%;
+    }
+  
+    .productPrice {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: $primary;
+    }
+  
+    .productDescription {
+      text-align: center;
+      font-size: 1rem;
+      color: $primary;
+      margin-top: 0.5rem;
+    }
+  }
+
